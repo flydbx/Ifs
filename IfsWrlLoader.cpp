@@ -256,7 +256,7 @@ bool IfsWrlLoader::load(const char* filename, Ifs& ifs) {
         	try{
                 if(!tokenizer.expecting("Normal")) throw("Syntax error: Normal");
                 if(!tokenizer.expecting("{")) throw ("Syntax error: Color missing {");
-                if(!tokenizer.expecting("normal")) throw ("Syntax error: normal");
+                if(!tokenizer.expecting("vector")) throw ("Syntax error: (in field normal) vector");
             } catch(const char * error){
                 cerr<<string(error)<<endl;
                 return success;
